@@ -1,7 +1,4 @@
-#theme: jekyll-theme-minimal
-remote_theme: "just-the-docs/just-the-docs"
-title: "펫플 문서 센터"
-description: "펫플의 오픈소스 고지 및 이용 약관"
+theme: jekyll-theme-minimal
 
 # 컬러 커스텀을 위해 필요한 설정
 color_scheme: nil
