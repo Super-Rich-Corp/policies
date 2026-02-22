@@ -1,0 +1,45 @@
+---
+---
+@import "{{ site.theme }}";
+
+:root {
+  /* 펫플 브랜드 컬러 정의 */
+  --brand-primary: #F5D76E;    /* Butter Yellow */
+  --brand-secondary: #8B7355;  /* Cookie Brown */
+  --brand-dark: #2C2825;       /* Warm Dark */
+  
+  /* 테마 변수 덮어쓰기 */
+  --link-color: var(--brand-secondary);
+  --header-bg-color: var(--brand-primary); /* 상단 헤더에 버터 옐로우 적용 */
+  --nav-child-link-color: var(--brand-secondary);
+}
+
+/* 사이드바(좌측 메뉴) 상단 부분 */
+.site-header {
+  background-color: var(--brand-primary);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+/* 사이드바 내 제목 텍스트 */
+.site-title {
+  color: var(--brand-dark) !important;
+  font-weight: 800;
+}
+
+/* 현재 선택된 메뉴 강조 */
+.nav-list-item.active > .nav-list-link {
+  color: var(--brand-dark) !important;
+  background-image: linear-gradient(270deg, rgba(245, 215, 110, 0) 0%, #F5D76E 100%);
+  font-weight: bold;
+}
+
+/* 표(Table) 헤더 스타일 수정 (오픈소스 고지 표에 적용) */
+table thead th {
+  background-color: #fdf6e3; /* 버터 옐로우의 아주 연한 버전 */
+  color: var(--brand-secondary);
+}
+
+/* 본문 내 강조(Bold) 텍스트 */
+strong {
+  color: var(--brand-dark);
+}
