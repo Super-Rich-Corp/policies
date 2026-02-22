@@ -85,3 +85,14 @@ h1, h2, h3, h4, h5, h6 {
 .project-name {
   color: $petple-brown-900 !important; // 헤더 안은 다크 브라운이 더 잘 어울립니다.
 }
+
+// 상단 버튼 영역 전체를 숨깁니다.
+.btn {
+  display: none !important;
+}
+
+// 만약 버튼만 숨기고 싶다면 위 코드를 쓰고,
+// 버튼이 있던 자리의 여백까지 깔끔하게 정리하려면 아래 코드를 추가하세요.
+.page-header {
+  padding: 4rem 2rem !important; // 버튼이 사라진 만큼 여백을 다시 조정
+}
