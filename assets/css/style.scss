@@ -70,3 +70,18 @@ blockquote {
 strong {
   color: $petple-brown-500;
 }
+
+// 모든 제목 요소의 색상을 브라운으로 강제 지정
+h1, h2, h3, h4, h5, h6 {
+  color: $petple-brown-500 !important; // !important를 붙여야 테마 기본 초록색을 이깁니다.
+}
+
+// 특히 본문 내의 큰 제목 h1에 대해 한번 더 지정
+.main-content h1 {
+  color: $petple-brown-500 !important;
+}
+
+// 혹시 모르니 헤더 섹션 안의 프로젝트 이름(h1)도 다시 확인
+.project-name {
+  color: $petple-brown-900 !important; // 헤더 안은 다크 브라운이 더 잘 어울립니다.
+}
