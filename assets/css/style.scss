@@ -1,0 +1,11 @@
+---
+---
+@import "{{ site.theme }}";
+
+// 펫플 브랜드 컬러
+$brand-primary: #F5D76E;   // Butter Yellow
+$brand-secondary: #8B7355; // Cookie Brown
+
+header { border-bottom: 5px solid $brand-primary; }
+a { color: $brand-secondary; }
+table thead { background-color: $brand-primary; }

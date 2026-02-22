@@ -1,4 +1,6 @@
 theme: jekyll-theme-minimal
+title: 펫플 문서 센터
+description: 펫플의 이용 약관
 
-# 컬러 커스텀을 위해 필요한 설정
-color_scheme: nil
+# minimal 테마는 별도의 color_scheme 설정을 지원하지 않으므로 
+# 이 줄은 지우거나 주석 처리해도 무방합니다.
