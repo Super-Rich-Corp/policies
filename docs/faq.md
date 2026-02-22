@@ -1,0 +1,4 @@
+---
+layout: default
+title: 자주 묻는 질문
+---
