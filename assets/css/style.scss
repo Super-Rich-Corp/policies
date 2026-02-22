@@ -2,87 +2,71 @@
 ---
 @import "{{ site.theme }}";
 
-// 1. 펫플 팔레트 정의 (보내주신 값 기준)
+// 1. 펫플 전체 팔레트 정의 (Error 방지를 위해 전체 선언)
+$petple-yellow-300: #F9E79F;
 $petple-yellow-400: #F5D76E; // Primary
-$petple-yellow-300: #F9E79F; // Header Gradient Sub
-$petple-brown-500: #8B7355;  // Secondary
-$petple-brown-900: #2C2825;  // Neutral 900 느낌의 다크 브라운
-$petple-neutral-100: #F5F4F2; 
-$petple-blue-400: #5A9BE8;   // Info Blue (Note 등에 활용)
+$petple-yellow-50:  #FFFDF5;
+$petple-yellow-600: #D4A84A; // <--- 이 부분이 누락되어 에러가 났었습니다.
 
-// 2. Cayman 테마 핵심 레이아웃 커스텀
+$petple-brown-500:  #8B7355; // Secondary
+$petple-brown-900:  #2C2825; // Neutral 900 느낌
+
+$petple-blue-50:   #F5F9FE;
+$petple-blue-400:  #5A9BE8; // Info Blue
+
+$petple-neutral-300: #D4D1CC;
+$petple-neutral-600: #5C5955;
+
+// 2. Cayman 테마 커스텀
 .page-header {
-  // 상단 그라데이션: Yellow 400 -> Yellow 300
   background-color: $petple-yellow-400;
   background-image: linear-gradient(120deg, $petple-yellow-400, $petple-yellow-300);
-  padding: 3rem 2rem; // 헤더 높이 조절
+  padding: 3rem 2rem;
   
   .project-name, .project-tagline {
     color: $petple-brown-900 !important;
-    text-shadow: none; // 가독성을 위해 쉐도우 제거
+    text-shadow: none;
   }
 }
 
-// 3. 본문 텍스트 및 링크
 body {
   color: $petple-brown-900;
 }
 
 a {
-  color: $petple-brown-500; // Brown 500
+  color: $petple-brown-500;
   text-decoration: none;
   border-bottom: 1px dashed $petple-brown-500;
-  transition: all 0.2s ease;
 
   &:hover {
-    color: $petple-yellow-600; // 살짝 진한 노란색으로 강조
+    color: $petple-yellow-600; // 이제 정상 작동합니다.
     border-bottom: 1px solid $petple-brown-500;
-    text-decoration: none;
   }
 }
 
-// 4. 버튼 스타일 (Cayman 상단 버튼)
 .btn {
   color: $petple-brown-900 !important;
   background-color: rgba(255, 255, 255, 0.3);
   border-color: rgba($petple-brown-900, 0.2) !important;
-  border-width: 1px;
-  
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-    border-color: $petple-brown-900 !important;
-  }
 }
 
-// 5. 표(Table) 커스텀 - 오픈소스 라이선스 고지용
 table {
   border: 1px solid $petple-neutral-300;
-  border-radius: 8px;
-  overflow: hidden;
-
   thead {
-    background-color: $petple-yellow-400; // 표 헤더를 버터 옐로우로
-    color: $petple-brown-900;
-    th {
-      font-weight: 800;
-      border: none;
-    }
+    background-color: $petple-yellow-400;
+    th { color: $petple-brown-900; font-weight: 800; }
   }
-  
   tr:nth-child(even) {
-    background-color: $petple-yellow-50; // 짝수 행에 아주 연한 노란색
+    background-color: $petple-yellow-50;
   }
 }
 
-// 6. 인용구 및 Note (Blue 400 활용)
 blockquote {
   border-left: 5px solid $petple-blue-400;
-  color: $petple-neutral-600;
   background-color: $petple-blue-50;
-  padding: 10px 20px;
+  color: $petple-neutral-600;
 }
 
-// 7. 강조 텍스트
 strong {
   color: $petple-brown-500;
 }
